@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 const ShowDetails = () => {
@@ -73,7 +73,7 @@ const ShowDetails = () => {
                             <h1 className="title">{showInfo.name}</h1>
                             <span className="cat">{showInfo.language}</span><span className="dateshow">{new Date(showInfo.premiered).toDateString()}</span>
                             <p className="genre">{showInfo.genres.map((dt, i) => {
-                                return i == 0 ? <span>{dt}</span> : <span>, {dt}</span>
+                                return i === 0 ? <span>{dt}</span> : <span>, {dt}</span>
                             })}</p>
                             <hr />
                             <p className="desc" dangerouslySetInnerHTML={{ __html: showInfo.summary }}></p>

@@ -1,16 +1,11 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
-import ShowsList from './ShowsList';
 import { useNavigate } from 'react-router-dom';
 
 const SearchBox = () => {
     const [searchKey, setSearchKey] = useState("");
     const [isEmptySearch, setEmpty] = useState(false);
     const navigate = useNavigate();
-    const styles = {
-        fontSize: "smaller",
-        color: 'red'
-    }
+
     useEffect(() => {
 
     }, []);
@@ -22,7 +17,7 @@ const SearchBox = () => {
     const onSubmitClick = (e) => {
         e.preventDefault();
         console.log(searchKey)
-        if(searchKey == "" || searchKey == undefined || searchKey == null){
+        if(searchKey === "" || searchKey === undefined || searchKey === null){
             setEmpty(true)
         }else{
             setEmpty(false)
