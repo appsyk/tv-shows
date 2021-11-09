@@ -1,0 +1,296 @@
+.route_list{
+    width: 100%;
+    padding: 1rem;
+    border-bottom: 3px solid grey;
+  }
+  .search_box{
+    padding: 3rem;
+    border-radius: 5px;
+    box-shadow: 0px 0px 25px 0px grey;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    // min-width: 200px;
+    transform: translate(-50%, -50%);
+    h1{
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    form{
+      border: 1px solid grey;
+      border-radius: 8px;
+      height: 2.3rem;
+      transition: all 0.5 ease-out;
+    }
+    input{
+      border: none;
+      margin: 5px;
+    }
+    input:focus{
+      outline: none;
+    }
+    .btn_search{
+      margin-right: .25rem;
+      padding: 0.25rem 0.4rem !important;
+      border: none;
+      background: rgb(235, 235, 235);
+      border-radius: 20px;
+    }
+    .error{
+      font-size: smaller;
+      color: red;
+      padding-left: .25rem;
+    }
+  }
+  .box_overlay{
+    background: linear-gradient(to top, transparent, transparent);
+    position: absolute;
+    height: 200px;
+    width: 200px;
+    bottom: -270px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    // visibility: hidden;
+    transform: scale(1);
+    transition: all 0.5s ease-out;
+    // transition-duration: 0.5s;
+
+    .show_info{
+        position: absolute;
+        bottom: 0;
+        padding: 0.5rem;
+
+        h6{
+            color: white;
+            margin: 0;
+        }
+        p{
+            margin: 0;
+        }
+        .shortinfo{
+            color: white;
+
+        }
+        .summary{
+            font-size: x-small;
+            color: white;
+        }
+
+    }
+
+  }
+
+  .list_container{
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    .list_box{
+      box-shadow: 0px 0px 10px 0px grey;
+      margin: 10px;
+      width: 200px !important;
+      height: 270px;
+      min-width: 150px;
+      min-height: 200px;
+      border-radius: 5px;
+      overflow: hidden;
+      padding: 0 !important;
+      position: relative;
+      transform: scale(1);
+      transition: transform 0.3s 0.3s ease-out;
+      cursor: pointer;
+      button{
+        // background: #ffffff !important;
+        background: linear-gradient(to top, #388ab9, #034a66) !important;
+        border: none;
+        // color: black;
+        color: white;
+        font-size: smaller;
+        position: absolute;
+        bottom: 0px;
+        right: 0px;
+        border-top-left-radius: 5px;
+        // box-shadow: 0px 0px 3px 0px rgb(255, 255, 255);
+        padding: 0.25rem;
+      }
+      span{
+        font-size: smaller;
+      }
+      img{
+        width: 100%;
+      }
+      .ratings{
+        position: absolute;
+        transform: rotate(-45deg);
+        background: linear-gradient(to top, #388ab9, #034a66) !important;
+        top: -10px;
+        left: -35px;
+        font-size: small;
+        color: white;
+        padding: 1rem 2rem 0 2rem;
+    
+        p{
+          transform: rotate(45deg);
+          margin: -5px 0 0px -3px;
+          padding: 0 0.5rem 0 0.2rem;
+          font-size: smaller;
+          width: 30px;
+          text-align: center;
+        }
+      }
+    }
+  .list_box:hover{
+    // animation: scaleUp .3s ease-out;
+    // transition: transform 0.3s 1s ease-out;
+    transform: scale(1.25);
+    z-index: 1;
+    .box_overlay{
+      // visibility: visible !important;
+      bottom: 0;
+    //   background: linear-gradient(to top, #020202e1, #02020277, #02020231, transparent, transparent);
+      background: linear-gradient(to top, #020202, transparent);
+    }
+    button{
+      background: linear-gradient( to bottom, #ffffff, #c0d8e6) !important;
+      color: black;
+      // bottom: 5px;
+      // right: 5px;
+    }
+  }
+  
+  .list_box:not(:hover){
+    // animation: scaleDown .3s ease-out;
+    transition: transform 0.3s 0s ease-out;
+    transform: scale(1);
+  }
+}
+  
+  .productpage{
+    margin: 3rem auto;
+    position: relative;
+    .bg_img{
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      border-radius: 5px;
+      filter: blur(8px);
+      -webkit-filter: blur(8px);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .back_btn{
+      position: absolute;
+      top: 1rem;
+      left: 0.5rem;
+      width: fit-content;
+      a{
+        color: #242323;
+      }
+      svg{
+        color: black;
+        background: white;
+        padding: 0.2rem;
+        border-radius: 20px;
+        cursor: pointer;
+      }
+    }
+    .info_overley{
+      background: rgba(22, 22, 22, 0.212);
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    .product_box{
+      box-shadow: 0px 0px 25px 0px grey;
+      border-radius: 5px;
+      padding: 2rem 1rem;
+      background: #0000008e;
+      .white_color{
+        color: white !important;
+      }
+    }
+    .img_col{
+      margin: auto;
+    }
+    .productimg{
+      width: 100%;
+    }
+    .ratecount{
+      font-size: x-large;
+      font-weight: bold;
+    }
+    .totcount{
+      margin-left: 5rem;
+    }
+    .rating_box{
+      background: #eeeeee;
+      border: 1px solid #c4c4c4;
+      border-radius: 5px;
+      padding: 0.75rem 1.5rem;
+      width: fit-content;
+      color: black;
+    }
+    .cat{
+      font-size: unset;
+    }
+    .dateshow{
+      font-size: smaller;
+      float: right;
+    }
+    .genre{
+      font-size: 15px;
+      margin-bottom: -13px;
+    }
+  }
+  
+  .productList_btn{
+    background: rgb(245, 245, 245);
+    width: 250px;
+    height: 100px;
+    font-size: large;
+    color: rgb(92, 92, 92);
+    border: none;
+    box-shadow: 0px 0px 20px -1px rgb(126, 126, 126);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+  }
+  
+  .spinner-grow{
+    position: relative;
+    margin: auto;
+    // top: 50%;
+    // left: 50%;
+    // transform: translate(-50%, -50%);
+    width: 10rem !important;
+    height: 10rem !important;
+  }
+  
+  .spinner_center{
+    margin-top: 10rem;
+    // position: absolute;
+  }
+
+  @keyframes scaleUp{
+      0%{
+          transform: scale(1);
+      }
+      100%{
+          transform: scale(1.25);
+      }
+  }
+  @keyframes scaleDown{
+    0%{
+        transform: scale(1.15);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+  
